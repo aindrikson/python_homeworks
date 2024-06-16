@@ -1,0 +1,13 @@
+def greed(num):
+    print(num, end='')
+greed('8')
+greed('8')
+greed('0')
+greed('0')
+greed('5')
+greed('5')
+greed('5')
+greed('3')
+greed('5')
+greed('3')
+greed('5')
