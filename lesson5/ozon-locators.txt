@@ -1,0 +1,5 @@
+Локатор кнопки Войти - //div[contains(@data-widget, 'profileMenuAnonymous')]
+Локатор кнопки Заказы - //a[contains(@href, '/my/orderlist')]
+Локатор ссылки OZON Job (в футере) - //a[contains(@class, 'ah6 fd6_9')]
+Локатор выбора валюты (верхний левый угол страницы) - //div[contains(concat(' ',@class,' '),'ga14') and normalize-space(.)='RUB']
+Локатор выпадашки Везде (в поисковой строке) - //span[contains(concat(' ',@class,' '),'a8ba_32') and normalize-space(.)='Везде']
