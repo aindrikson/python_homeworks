@@ -4,7 +4,6 @@ from selenium.webdriver.firefox.service import Service as FirefoxService
 from webdriver_manager.firefox import GeckoDriverManager
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
-from time import sleep 
 
 driver = webdriver.Firefox(service=FirefoxService(GeckoDriverManager().install()))
 
@@ -20,10 +19,10 @@ driver.find_element(By.XPATH, "//input[@name='job-position']").send_keys("QA")
 driver.find_element(By.XPATH, "//input[@name='company']").send_keys("SkyPro")
 
 driver.find_element(By.XPATH, "//button[contains(concat(' ',@class,' '),'btn') and normalize-space(.)='Submit']").click()
-sleep(5)
 
 def test_form_danger():
-    assert "danger" in driver.find_element(By.XPATH, "//div[contains(concat(' ',@class,' '),'alert') and normalize-space(.)='N/A']").get_attribute("class")
+    assert "danger" in driver.find_element
+    (By.XPATH, "//div[contains(concat(' ',@class,' '),'alert') and normalize-space(.)='N/A']").get_attribute("class")
 
 def test_form_success():
     assert "success" in driver.find_element(By.XPATH, "//div[@id='first-name']").get_attribute("class")
