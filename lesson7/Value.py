@@ -1,0 +1,10 @@
+
+first_name = "Иван"
+last_name = "Петров"
+address = "Ленина, 55-3"
+city = "Москва"
+country = "Россия"
+email = "test@skypro.com"
+phone = "+7985899998787"
+job_position = "QA"
+compamy = "SkyPro"
