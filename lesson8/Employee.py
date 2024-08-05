@@ -31,13 +31,13 @@ class Employee:
        "url": "ai.com",
        "phone": "780800",
        "birthdate": "2020-08-04T10:34:32.326Z", 
-       "isActive": "true"
+       "isActive": True
        }
-       response = requests.post(self.url+'/employee' , headers=headers, json=body)
+       response = requests.post(self.url+'/employee/' , headers=headers, json=body)
        return response.json()
     
     def get_info(self, employee_id):
-       response = requests.get(self.url+'/employee' + str(employee_id))
+       response = requests.get(self.url+'/employee/' + str(employee_id))
        return response.json()
     
     def change_info(self, employee_id):
@@ -47,8 +47,8 @@ class Employee:
        "email": "aimortikova@test.ru",
        "url": "aimor.com",
        "phone": "780878",
-       "isActive": 'true'
+       "isActive": True
        }
        headers = {'x-client-token' : token}
-       response = requests.patch(self.url+'/employee' + str(employee_id), headers=headers, json=body)
+       response = requests.patch(self.url+'/employee/' + str(employee_id), headers=headers, json=body)
        return response.json()

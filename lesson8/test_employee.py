@@ -21,18 +21,15 @@ def test_employee():
     employee_id = res["id"]
     
     new_employee = api.get_info(employee_id)
-
+    
     assert new_employee["id"] == employee_id
 
-
     change_employee = api.change_info(employee_id)
-    new_last_name = change_employee["lastName"]
     new_email = change_employee["email"]
     
     assert change_employee["id"] == employee_id
-    assert change_employee["lastName"] == new_last_name
     assert change_employee["email"] == new_email
-
+    assert change_employee["isActive"] == True
 
 
    
