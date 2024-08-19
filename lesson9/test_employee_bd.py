@@ -28,19 +28,20 @@ def test_employee_add():
     
     
 def test_get__change_info():
-    db.add_new("Александра", "Индриксон", "testai@test.ru", "1418", "780800")
+    db.add_new("Александра", "Индриксон", "testai@test.ru", "2703", "780800")
     max_id = db.get_max_id()
     
-    new_employee = db.get_info(max_id)
-    id_new_employee = new_employee[0]["id"]
-    
+    new_employee = api.get_info(max_id)
     assert new_employee["id"] == max_id
-    assert new_employee[-1][4] == "Александра"
     
-    db.update("Мортикова", id_new_employee)
+    db.update("Aleksandra", "Indrikson", "aindrikson@test.bd", "2700", "210021", max_id)
+    change_employee = api.get_info(max_id)
+    new_email = change_employee["email"]
+
+    assert change_employee["id"]== max_id
+    assert change_employee["email"]== new_email
     
-    
-    db.delete(id_new_employee)
+    db.delete(max_id)
 
 
 

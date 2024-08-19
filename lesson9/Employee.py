@@ -14,7 +14,7 @@ class Employee:
      return token
 
     def get_list(self):
-       company = {'company' : '1418'}
+       company = {'company' : '2703'}
        response = requests.get(self.url+'/employee', params=company)
        return response.json()
     
@@ -26,7 +26,7 @@ class Employee:
        "firstName": "Aleksandra",
        "lastName": "Indrikson",
        "middleName": "Igorevna",
-       "companyId": 1418,
+       "companyId": 2703,
        "email": "ai@test.ru",
        "url": "ai.com",
        "phone": "780800",
